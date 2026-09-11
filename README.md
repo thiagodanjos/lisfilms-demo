@@ -1,5 +1,7 @@
 # LisFilms — Demo 🎬
 
+> 🔗 Isto é só a demonstração. A aplicação **LisFilms** real, em produção, está em **[lisfilms.pt →](https://lisfilms.pt)**
+
 Versão pública de demonstração do **LisFilms**, uma rede social de filmes e séries. Este repositório é standalone: corre inteiramente no browser, com dados fictícios gerados localmente, sem qualquer ligação à aplicação real em produção, a servidores ou a chaves de API.
 
 **[Ver demo ao vivo →](https://thiagodanjos.github.io/lisfilms-demo/)**
