@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   LisFilms — demo pública, identidade visual dark + verde
+   ========================================================================== */
+@theme {
+  --color-bg: #0b0d10;
+  --color-sidebar: #08090c;
+  --color-raised: #121519;
+  --color-card: #161a20;
+  --color-card-hover: #1d222a;
+  --color-border: #252b34;
+  --color-border-strong: #323a45;
+
+  --color-text: #f4f6f8;
+  --color-muted: #9aa3ad;
+  --color-faint: #626b76;
+
+  --color-accent: #1ed760;
+  --color-accent-hover: #3be477;
+  --color-accent-soft: #122b1b;
+  --color-danger: #f23f42;
+  --color-gold: #f5c518;
+
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  --shadow-glow: 0 0 24px 0 rgb(30 215 96 / 0.35);
+  --shadow-card: 0 8px 30px rgb(0 0 0 / 0.35);
+
+  --radius-2xl: 1.25rem;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+::selection {
+  background: rgb(30 215 96 / 0.3);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2a313b;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #39424e;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.text-brand-gradient {
+  background: linear-gradient(92deg, #1ed760 0%, #7cf3a8 55%, #1ed760 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgb(18 21 25 / 0.72);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+}
