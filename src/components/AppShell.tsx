@@ -1,4 +1,4 @@
-import { Compass, Film, Home, LayoutList, Search, User } from 'lucide-react'
+import { Compass, ExternalLink, Film, Home, LayoutList, Search, User } from 'lucide-react'
 import { type ReactNode, useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { currentUser } from '../data/mock'
@@ -87,6 +87,16 @@ export function AppShell({ children }: { children: ReactNode }) {
                 className="w-full rounded-full border border-border bg-card py-2 pr-3 pl-9 text-sm text-text placeholder:text-faint focus:border-accent focus:outline-none"
               />
             </form>
+            <a
+              href="https://lisfilms.pt"
+              target="_blank"
+              rel="noreferrer"
+              title="Site oficial (lisfilms.pt)"
+              className="flex shrink-0 items-center gap-1.5 rounded-full bg-accent px-3 py-2 text-sm font-semibold text-black shadow-glow transition-colors hover:bg-accent-hover sm:px-4"
+            >
+              <ExternalLink size={14} />
+              <span className="hidden sm:inline">Site oficial</span>
+            </a>
             <Link to={`/perfil/${currentUser.username}`} className="md:hidden">
               <User size={22} className="text-muted" />
             </Link>
