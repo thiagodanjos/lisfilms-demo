@@ -1,86 +1,118 @@
-# LisFilms — Demo 🎬
+<div align="center">
 
-> 🔗 Isto é só a demonstração. A aplicação **LisFilms** real, em produção, está em **[lisfilms.pt →](https://lisfilms.pt)**
+<img src="docs/readme/banner.svg" width="100%" alt="LisFilms demo: a rede social de cinema, no teu navegador. Catálogo, críticas, feed, perfis e watchlist com dados fictícios, sem servidor, sem contas e sem chaves." />
 
-Versão pública de demonstração do **LisFilms**, uma rede social de filmes e séries. Este repositório é standalone: corre inteiramente no browser, com dados fictícios gerados localmente, sem qualquer ligação à aplicação real em produção, a servidores ou a chaves de API.
+<br>
 
-**[Ver demo ao vivo →](https://thiagodanjos.github.io/lisfilms-demo/)**
+<a href="https://thiagodanjos.github.io/lisfilms-demo/"><img src="https://img.shields.io/badge/Abrir-a_demo-1ED760?style=for-the-badge&labelColor=161A20" alt="Abrir a demo" /></a>
+<a href="https://lisfilms.pt"><img src="https://img.shields.io/badge/Site_oficial-lisfilms.pt-161A20?style=for-the-badge" alt="Site oficial: lisfilms.pt" /></a>
+<a href="https://github.com/thiagodanjos/lisfilms-demo/actions/workflows/deploy.yml"><img src="https://img.shields.io/github/actions/workflow/status/thiagodanjos/lisfilms-demo/deploy.yml?branch=main&style=for-the-badge&label=publica%C3%A7%C3%A3o" alt="Estado da publicação no GitHub Pages" /></a>
+<img src="https://img.shields.io/badge/React_19-161A20?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" />
+<img src="https://img.shields.io/badge/TypeScript-161A20?style=for-the-badge&logo=typescript&logoColor=3178C6" alt="TypeScript" />
+<a href="LICENSE"><img src="https://img.shields.io/badge/licen%C3%A7a-MIT-161A20?style=for-the-badge" alt="Licença MIT" /></a>
 
-![Página inicial da demo](docs/screenshots/home.png)
+</div>
 
-## Sobre este repositório
+<br>
 
-O LisFilms "a sério" é uma aplicação maior — desktop (Python/Tkinter) e web (React), com backend próprio, contas reais e integração com a API da TMDB — desenvolvida como Prova de Aptidão Profissional. Este repositório reconstrói, de raiz e apenas para portefólio, o núcleo da experiência social (catálogo, ficha de filme/série, reviews, feed, perfis e watchlist), com:
+> [!NOTE]
+> Isto é a **demonstração pública**. O LisFilms a sério, com contas, o catálogo real e o LisGames, está em
+> **[lisfilms.pt](https://lisfilms.pt)**.
 
-- **Dados 100% fictícios** — filmes, séries, pessoas e reviews inventados para esta demo, sem posters nem sinopses reais.
-- **Zero backend** — sem API, sem base de dados, sem autenticação real.
-- **Zero segredos** — não há chaves nem variáveis de ambiente a configurar.
-- **Interatividade local** — dar like numa review, escrever uma review ou guardar um título na watchlist funciona e fica guardado apenas no `localStorage` do teu browser.
+Esta demo mostra o essencial do **LisFilms**, uma rede social de filmes e séries: o catálogo, a ficha de cada
+título, as críticas, o feed, os perfis e a watchlist. Corre inteira no navegador, com dados inventados para ela,
+sem servidor, sem contas e sem chaves de API. O que fazes (guardar um título, gostar de uma crítica, escrever a
+tua) fica só no teu navegador.
 
-## Funcionalidades
+**[Experimenta a demo →](https://thiagodanjos.github.io/lisfilms-demo/)**
 
-- Catálogo de filmes e séries com filtros por tipo e género
-- Ficha de título com sinopse, elenco, nota da comunidade (★/5) e nota da crítica (/10)
-- Reviews da comunidade, com likes e possibilidade de escrever a tua própria
-- Feed de atividade de utilizadores fictícios
-- Perfis com estatísticas, géneros favoritos e histórico de reviews
-- Watchlist pessoal
-- Ranking "Top LisFilms" e secção de lançamentos
+<br>
 
-## Tecnologias
+## Ecrãs
 
-- [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vite.dev/)
-- [Tailwind CSS v4](https://tailwindcss.com/)
-- [React Router](https://reactrouter.com/)
-- [Zustand](https://zustand-demo.pmnd.rs/) (estado local + persistência em `localStorage`)
-- [Lucide Icons](https://lucide.dev/)
+<img src="docs/readme/ecras.svg" width="100%" alt="Capturas da demo a passar: início com o título em destaque, catálogo com filtros, ficha de um filme com a minha crítica, ficha de uma série, feed, descobrir com o Top LisFilms, watchlist e perfil" />
 
-## Como correr localmente
+<sub>Capturas da própria demo, com os dados fictícios que ela traz (mais um título na watchlist e uma crítica
+escrita no navegador, para se ver como fica). Estão todas em [`docs/capturas`](docs/capturas).</sub>
 
-```bash
-git clone https://github.com/thiagodanjos/lisfilms-demo.git
-cd lisfilms-demo
-npm install
-npm run dev
-```
+### No telemóvel
 
-Abre `http://localhost:5173`. Não é preciso nenhuma configuração adicional.
+<img src="docs/readme/telemovel.svg" width="100%" alt="Quatro telemóveis com a demo: o início com o destaque, a ficha de um filme, o catálogo com os filtros e o perfil com a watchlist" />
 
-```bash
-npm run build     # build de produção em dist/
-npm run preview   # pré-visualizar o build
-npm run lint      # oxlint
-```
+## O que podes fazer
 
-## Capturas de ecrã
+<img src="docs/readme/funcoes.svg" width="100%" alt="Catálogo, ficha de cada título, escrever críticas, gostar de críticas, feed, perfis, watchlist e Top LisFilms. Como é feita: dados fictícios, sem servidor, sem segredos e guardado só no navegador" />
 
-<table>
-  <tr>
-    <td><img src="docs/screenshots/catalogo.png" alt="Catálogo" /></td>
-    <td><img src="docs/screenshots/detalhe.png" alt="Ficha de título" /></td>
-  </tr>
-  <tr>
-    <td><img src="docs/screenshots/descobrir.png" alt="Descobrir / ranking" /></td>
-    <td><img src="docs/screenshots/mobile.png" alt="Versão mobile" /></td>
-  </tr>
-</table>
+Os títulos, as pessoas e as críticas foram inventados para esta demo: não há cartazes nem sinopses reais. Cada
+título tem um «cartaz» em gradiente, com a sua cor, e é isso que vês nas imagens acima.
 
-## Estrutura
+## A demo e o LisFilms real
+
+<img src="docs/readme/comparacao.svg" width="100%" alt="Comparação: a demo tem 18 títulos inventados, uma pessoa fictícia sem login, nenhum servidor, guarda no localStorage, 8 páginas, está no GitHub Pages e em português. O LisFilms real tem o catálogo da TMDB, MyAnimeList e IGDB, contas com login Google, API própria e PostgreSQL, guarda na conta, tem LisGames, LisPlayer e Wrapped, está em lisfilms.pt e na app para Windows, em quatro idiomas" />
+
+O LisFilms começou como a minha PAP (Prova de Aptidão Profissional), em Python e Tkinter, e cresceu para um site
+em produção com API própria e uma app para Windows. Esse código não é público, por isso esta demo foi feita de
+raiz para o portefólio: mostra a experiência e a identidade visual sem expor nada da app real.
+
+## Como funciona
+
+<img src="docs/readme/como.svg" width="100%" alt="No navegador: os dados fictícios de src/data/mock.ts alimentam as páginas em React 19 com React Router; o estado vive no Zustand e guarda-se no localStorage. Publicação: cada envio para o main corre o GitHub Actions, que compila a pasta dist e a publica no GitHub Pages" />
 
 ```
 src/
-├── components/     # AppShell (layout) e componentes de UI reutilizáveis
-├── data/           # tipos + dados fictícios (filmes, séries, pessoas, reviews)
-├── pages/          # uma página por rota
-├── store/          # estado local (Zustand) persistido em localStorage
-└── lib/            # utilitários
+├── components/   AppShell (barra lateral, pesquisa, navegação no telemóvel) e peças de interface
+├── data/         tipos e dados fictícios: títulos, pessoas e críticas
+├── pages/        uma página por rota
+├── store/        estado local (Zustand), guardado no localStorage
+└── lib/          utilitários
 ```
 
-## Autor
+Feito com [React 19](https://react.dev), [TypeScript](https://www.typescriptlang.org),
+[Vite](https://vite.dev), [Tailwind CSS 4](https://tailwindcss.com), [React Router](https://reactrouter.com),
+[Zustand](https://zustand-demo.pmnd.rs) e ícones [Lucide](https://lucide.dev).
 
-**Thiago Souza** — [github.com/thiagodanjos](https://github.com/thiagodanjos)
+## Correr no teu computador
+
+Precisas do [Node.js](https://nodejs.org) 22. Não há nada para configurar:
+
+```bash
+git clone https://github.com/thiagodanjos/lisfilms-demo.git
+```
+
+```bash
+cd lisfilms-demo
+```
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+Abre http://localhost:5173/lisfilms-demo/. Para compilar como no GitHub Pages: `npm run build` (fica em `dist/`)
+e `npm run preview` para a ver. O lint corre com `npm run lint` (oxlint).
+
+Para voltares ao início da demo, apaga os dados do site no navegador (ou o item `lisfilms-demo` do
+localStorage).
+
+## Publicação
+
+Cada envio para o `main` corre o workflow [`deploy.yml`](.github/workflows/deploy.yml): instala as dependências,
+compila e publica a pasta `dist/` no GitHub Pages, em
+**[thiagodanjos.github.io/lisfilms-demo](https://thiagodanjos.github.io/lisfilms-demo/)**.
+
+As imagens deste README são geradas por [`docs/readme/gerar.py`](docs/readme/gerar.py), que lê os títulos e os
+números diretamente de `src/data/mock.ts`, com a fonte [Inter](https://rsms.me/inter/) (SIL Open Font License) e
+os ícones Lucide (ISC); as licenças estão em [`docs/readme/recursos`](docs/readme/recursos/LICENCAS.md).
 
 ## Licença
 
-Distribuído sob a licença MIT — ver [LICENSE](LICENSE).
+[MIT](LICENSE): podes usar, estudar e adaptar o código, desde que mantenhas o aviso de copyright.
+
+<br>
+
+<div align="center">
+<sub>Feito por <a href="https://github.com/thiagodanjos">Thiago Souza</a> · o LisFilms a sério está em <a href="https://lisfilms.pt">lisfilms.pt</a> · da família Lis: <a href="https://github.com/thiagodanjos/lissecurity">LisSecurity</a> e <a href="https://github.com/thiagodanjos/lisdiscord">LisDiscord</a></sub>
+</div>
